@@ -1,5 +1,4 @@
 # This program will allow you to convert Degrees to Radians to Decimal Degrees etc.
-
 import math
 import cmath
 
@@ -28,21 +27,23 @@ if label == 1:
 
 if label == 2:   
     degree = float(input("Enter value of DEGREE: "))
+    seconds_rounding = int(input("Rounding on SECONDS:  "))
     minutes = degree%1.0*60
     seconds = minutes%1.0*60
-    print(degree, "degrees equals", math.floor(degree), "degrees", math.floor(minutes), "minutes and", round(seconds, 1), "seconds")
+    print(degree, "degrees equals", math.floor(degree), "degrees", math.floor(minutes), "minutes and", round(seconds, seconds_rounding), "seconds")
 
 if label == 3:
-    radian = int(input("Enter value of RADIAN:2 "))
+    radian = int(input("Enter value of RADIAN: "))
     degree = radian*(180/math.pi)
     print(radian, " radians equals ", degree, "degrees")
 
 if label == 4:
     radian = float(input("Enter value of RADIAN: "))
+    seconds_rounding = int(input("Rounding on SECONDS:  "))
     degree = radian*(180/math.pi)
     minutes = degree%1.0*60
     seconds = minutes%1.0*60
-    print(radian, "radians equals", math.floor(degree), "degrees", math.floor(minutes), "minutes and", round(seconds, 1), "seconds")
+    print(radian, "radians equals", math.floor(degree), "degrees", math.floor(minutes), "minutes and", round(seconds, seconds_rounding), "seconds")
 
 if label == 5:
     d = int(input('Enter value of Degrees: '))
@@ -57,7 +58,7 @@ if label == 6:
     s = int(input("Enter value of Seconds: "))
     degree = (d + (m/60) + (s/3600))
     radian = degree*(math.pi/180)
-    print(d, "degrees,", m, "minutes and", s, "seconds equal", radian, "radians")
+    print(d, "degrees,", m, "minutes and", s, "seconds equal", radian, "radians")    
 
 
 print("-------------------")
